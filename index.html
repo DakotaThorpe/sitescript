@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dakotath EPortfoil</title>
+    <script src="Tone.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -42,6 +43,14 @@
 </nav>
   </head>
   <body onload="myFunction()">
+    <script>
+      function toneBing() {
+        //create a synth and connect it to the main output (your speakers)
+        const synth = new Tone.Synth().toDestination();
+        //play a middle 'C' for the duration of an 8th note
+        synth.triggerAttackRelease("C4", "8n");
+      }
+    </script>
     <script src="//cdn.wordart.com/wordart.min.js" async defer></script>
 <div style="text-align: center;" data-wordart-src="//cdn.wordart.com/json/1u6zio7an2ne" data-wordart-show-attribution align="center"></div>
     <h1>Welcome!</h1>
@@ -52,7 +61,7 @@
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSR-t6c2jJUVPeq78voDB7PresSdACQZDFYDnGgat8kX-Oi_mNjRLZFHCAoHh0Jcoax2T2jsrTyePxx/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>  <h1 class="h2">Bootstrap v5 UI</h1>
   <p>I am not using google's UI!</p>
   <p>
-    <a class="btn btn-primary" href="https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#bug-reports" rel="noopener noreferrer" target="_blank">Read bug report guidelines</a>
+    <a class="btn btn-primary" onclick="toneBing();" rel="noopener noreferrer" target="_blank">Ding sound</a>
   </p>
   <p>More stuff to come!<a href="https://github.com/twbs/bootstrap/issues/new/choose" rel="noopener noreferrer" target="_blank">new issue</a>.</p>
   <p>Thanks! <span class="text-danger">♥</span></p>
